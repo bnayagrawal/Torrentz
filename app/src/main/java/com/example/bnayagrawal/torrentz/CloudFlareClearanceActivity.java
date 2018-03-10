@@ -37,7 +37,7 @@ public class CloudFlareClearanceActivity extends AppCompatActivity{
     }
 
     private void waitForClearance() {
-        Toast.makeText(CloudFlareClearanceActivity.this,"Waiting for cloud flare clearance!\nPlease wait 5 seconds",Toast.LENGTH_LONG).show();
+        //Toast.makeText(CloudFlareClearanceActivity.this,"Waiting for cloud flare clearance!\nPlease wait 5 seconds",Toast.LENGTH_LONG).show();
         new Thread(new Runnable() {
             @Override
             public void run() {
@@ -50,6 +50,6 @@ public class CloudFlareClearanceActivity extends AppCompatActivity{
     @Override
     protected void onStop() {
         super.onStop();
-        Toast.makeText(CloudFlareClearanceActivity.this,"Clearance cookie retrieved :)",Toast.LENGTH_LONG).show();
+        //Toast.makeText(CloudFlareClearanceActivity.this,"Clearance cookie retrieved :)",Toast.LENGTH_LONG).show();
     }
 }

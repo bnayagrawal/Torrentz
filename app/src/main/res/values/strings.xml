@@ -51,7 +51,7 @@
     <string name="action_order_by">Order by</string>
 
     <!-- Values for dialog_cloud_flare_clearance.xml -->
-    <string name="label_wait_for_clearance">Please wait for CloudFlare clearance&#8230;</string>
-    <string name="info_cookie_retrieved">Clearance cookies retrieved :)</string>
-    <string name="error_retrieving_cookie">Error retrieving clearance cookies!\nPlease try again.</string>
+    <string name="label_wait_for_clearance">Fetching CloudFlare clearance cookies&#8230;</string>
+    <string name="info_cookie_retrieved">CloudFlare clearance cookies retrieved :)</string>
+    <string name="error_retrieving_cookie">Error retrieving CloudFlare clearance cookies!\nPlease try again.</string>
 </resources>

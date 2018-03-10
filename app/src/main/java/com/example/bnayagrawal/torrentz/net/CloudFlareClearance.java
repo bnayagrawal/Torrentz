@@ -1,12 +1,18 @@
 package com.example.bnayagrawal.torrentz.net;
 
+import java.io.IOException;
 import java.net.CookieHandler;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.net.URLConnection;
 
 import android.app.DialogFragment;
 import android.content.Context;
+import android.util.Log;
 import android.webkit.CookieManager;
 import android.webkit.WebResourceError;
 import android.webkit.WebResourceRequest;
+import android.webkit.WebResourceResponse;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
@@ -21,25 +27,9 @@ public final class CloudFlareClearance {
         void onClearanceCookiesRetrieveError();
     }
 
-    private static final String COOKIE_KEY_CFDUID = "__cfduid";
-    private static final String COOKIE_KEY_CF_CLEARANCE = "cf_clearance";
-
-    public static boolean isCookieAvailable() {
+    public static String getCookies() {
         CookieManager manager = android.webkit.CookieManager.getInstance();
-        String cookies = manager.getCookie(Url.BASE_URL);
-        String[] cookiesArray = (cookies != null ) ? cookies.split(";") : null;
-        if(null != cookiesArray) {
-            for(String cookie: cookiesArray) {
-
-            }
-        } else {
-            return false;
-        }
-        return false;
-    }
-
-    public static boolean isCookieExpired() {
-        return false;
+        return manager.getCookie(Url.BASE_URL);
     }
 
     public static void fetchClearanceCookies(DialogFragment fragment) {
@@ -57,7 +47,8 @@ public final class CloudFlareClearance {
             @Override
             public void onPageFinished(WebView view, String url) {
                 super.onPageFinished(view, url);
-                try {Thread.sleep(5000);}catch (InterruptedException e) {e.printStackTrace();}
+                //TODO: This code runs on UI thread, Fix is required.
+                try {Thread.sleep(10000);}catch (InterruptedException e) {e.printStackTrace();}
                 listener.onClearanceCookiesRetrieved();
             }
 
@@ -66,6 +57,7 @@ public final class CloudFlareClearance {
                 super.onReceivedError(view, request, error);
                 listener.onClearanceCookiesRetrieveError();
             }
+
         });
         webView.loadUrl(Url.BASE_URL);
     }

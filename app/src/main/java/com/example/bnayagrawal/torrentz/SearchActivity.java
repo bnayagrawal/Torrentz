@@ -10,6 +10,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.SearchView;
 import android.util.Log;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.example.bnayagrawal.torrentz.adapter.SearchSuggestionArrayAdapter;
 import com.example.bnayagrawal.torrentz.dialog.CloudFlareClearanceDialog;
@@ -30,6 +31,8 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
+import static com.example.bnayagrawal.torrentz.net.CloudFlareClearance.getCookies;
+
 public class SearchActivity extends AppCompatActivity {
 
     private static final String TAG = SearchActivity.class.getSimpleName();
@@ -43,6 +46,7 @@ public class SearchActivity extends AppCompatActivity {
 
     private TorrentzService mService;
     private retrofit2.Call<String> mCall;
+    private String mCookies;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -93,25 +97,23 @@ public class SearchActivity extends AppCompatActivity {
     private void getSuggestions(final String query) {
         if(null == mService && null == mCall) {
             mService = (RetrofitUtil.buildRetrofitObject()).create(TorrentzService.class);
-            mCall = mService.getQuerySuggestions(query);
+            mCall = mService.getQuerySuggestions(mCookies, query);
         } else {
             mCall = mCall.clone();
         }
 
+        mCookies = getCookies();
         mCall.enqueue(new Callback<String>() {
             @Override
             public void onResponse(Call<String> call, Response<String> response) {
                 try {
+                    if(mCookies != null)
+                    Log.d(TAG,mCookies);
                     if(response.isSuccessful()) {
                         String[] suggestions = JsonUtil.getSuggestionsFromJsonArray(new JSONArray(response.body()));
                         mArrayAdapter.swapDataSet(suggestions, query);
                     } else {
-                        if(CloudFlareClearance.isCookieAvailable()) {
-                            if(CloudFlareClearance.isCookieExpired())
-                                getCloudFlareClearance();
-                        } else {
-                            getCloudFlareClearance();
-                        }
+                        getCloudFlareClearance();
                     }
                 } catch (JSONException j) {
                     j.printStackTrace();
