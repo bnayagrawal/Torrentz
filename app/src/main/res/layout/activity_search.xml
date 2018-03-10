@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/pattern_large"
+    tools:context="com.example.bnayagrawal.torrentz.SearchActivity">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/act_s__card_view_search__mrg_hrz"
+        android:layout_marginStart="@dimen/act_s__card_view_search__mrg_hrz"
+        android:layout_marginTop="@dimen/act_s__card_view_search__mrg_vrt"
+        app:cardCornerRadius="@dimen/act_s__card_view_search__corner_radius"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.SearchView
+                android:id="@+id/search_view"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:iconifiedByDefault="false"
+                app:layout_constraintEnd_toStartOf="@+id/image_options"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:queryBackground="@android:color/transparent"
+                app:queryHint="@string/query_hint_search_torrents" />
+
+            <ImageView
+                android:id="@+id/image_options"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/act_s__image_options__mrg_hrz"
+                android:layout_marginEnd="@dimen/act_s__image_options__mrg_hrz"
+                android:layout_marginTop="@dimen/act_s__image_options__mrg_vrt"
+                android:adjustViewBounds="true"
+                android:background="@drawable/ripple_effect"
+                android:contentDescription="@null"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_more" />
+
+            <ListView
+                android:id="@+id/list_view_suggestions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/search_view">
+
+            </ListView>
+
+        </android.support.constraint.ConstraintLayout>
+    </android.support.v7.widget.CardView>
+
+    <TextView
+        android:id="@+id/text_label_about"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/act_s__text_label_about__mrg_vrt"
+        android:layout_marginEnd="@dimen/act_s__text_label_about__mrg_hrz"
+        android:layout_marginStart="@dimen/act_s__text_label_about__mrg_hrz"
+        android:shadowColor="@android:color/black"
+        android:shadowDx="4"
+        android:shadowDy="4"
+        android:shadowRadius="8"
+        android:textAlignment="center"
+        android:textColor="?android:attr/textColorSecondary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:text="@string/label_about" />
+
+    <TextView
+        android:id="@+id/text_label_provider"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="?android:attr/textColorPrimaryInverse"
+        android:textSize="@dimen/text_size_large"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="@string/label_provider_name" />
+
+    <TextView
+        android:id="@+id/text_browse_popular_torrents"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/act_s__text_browse_popular_torrents__mrg_top"
+        android:textAlignment="center"
+        android:textColor="@color/colorAccent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_label_provider"
+        android:text="@string/label_browse_popular_torrents" />
+
+    <ImageView
+        android:id="@+id/image_icon_search"
+        android:layout_width="@dimen/act_s__image_icon_search__size"
+        android:layout_height="@dimen/act_s__image_icon_search__size"
+        android:layout_marginBottom="@dimen/act_s__image_icon_search__mrg_vrt"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/content_description_search_icon"
+        app:layout_constraintBottom_toTopOf="@+id/text_label_provider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ic_magnifying_glass" />
+
+</android.support.constraint.ConstraintLayout>

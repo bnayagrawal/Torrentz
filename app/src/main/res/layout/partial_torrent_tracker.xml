@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <View
+        android:id="@+id/view_divider_tracker_list"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/divider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/text_tracker_url"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/prt_tt__text_tracker_url__mrg_vrt"
+        android:layout_marginTop="@dimen/prt_tt__text_tracker_url__mrg_vrt"
+        android:ellipsize="marquee"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:paddingEnd="@dimen/prt_tt__text_tracker_url__mrg_end"
+        android:paddingStart="@dimen/prt_tt__text_tracker_url__mrg_start"
+        android:scrollHorizontally="true"
+        android:singleLine="true"
+        android:textColor="@color/link"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/image_icon_tracker_seeds"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view_divider_tracker_list"
+        tools:text="Tracker url" />
+
+    <TextView
+        android:id="@+id/text_tracker_seeds_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/prt_tt__text_tracker_seeds_count__mrg_vrt"
+        android:layout_marginEnd="@dimen/prt_tt__text_tracker_seeds_count__mrg_hrz"
+        android:layout_marginTop="@dimen/prt_tt__text_tracker_seeds_count__mrg_vrt"
+        android:textColor="@color/primaryText"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="0" />
+
+    <ImageView
+        android:id="@+id/image_icon_tracker_peers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/prt_tt__image_icon_tracker_peers__mrg_vrt"
+        android:layout_marginEnd="@dimen/prt_tt__image_icon_tracker_peers__mrg_hrz"
+        android:layout_marginTop="@dimen/prt_tt__image_icon_tracker_peers__mrg_vrt"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/content_description_peers_icon"
+        android:tint="@color/red"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/text_tracker_seeds_count"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_arrow_drop_down_black_24dp" />
+
+    <TextView
+        android:id="@+id/text_tracker_peers_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/prt_tt__text_tracker_peers_count__mrg_vrt"
+        android:layout_marginEnd="@dimen/prt_tt__text_tracker_peers_count__mrg_hrz"
+        android:layout_marginTop="@dimen/prt_tt__text_tracker_peers_count__mrg_vrt"
+        android:textColor="@color/primaryText"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/image_icon_tracker_peers"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="0" />
+
+    <ImageView
+        android:id="@+id/image_icon_tracker_seeds"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/prt_tt__image_icon_tracker_seeds__mrg_vrt"
+        android:layout_marginEnd="@dimen/prt_tt__image_icon_tracker_seeds__mrg_hrz"
+        android:layout_marginTop="@dimen/prt_tt__image_icon_tracker_seeds__mrg_vrt"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/content_description_seeds_icon"
+        android:tint="@color/green"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/text_tracker_peers_count"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_arrow_drop_up_black_24dp" />
+
+</android.support.constraint.ConstraintLayout>

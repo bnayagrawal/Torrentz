@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <View
+        android:id="@+id/view_divider_download_link_list"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/image_icon_url"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/prt_tdl__image_icon_url__mrg_vrt"
+        android:layout_marginStart="@dimen/prt_tdl__image_icon_url__mrg_hrz"
+        android:layout_marginTop="@dimen/prt_tdl__image_icon_url__mrg_vrt"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/content_description_favicon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view_divider_download_link_list"
+        app:srcCompat="@drawable/ic_image_black_24dp" />
+
+    <TextView
+        android:id="@+id/text_download_link_url"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/prt_tdl__text_download_link_url__mrg"
+        android:layout_marginEnd="@dimen/prt_tdl__text_download_link_url__mrg"
+        android:layout_marginStart="@dimen/prt_tdl__text_download_link_url__mrg"
+        android:layout_marginTop="@dimen/prt_tdl__text_download_link_url__mrg"
+        android:textColor="@color/link"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/text_download_link_age"
+        app:layout_constraintStart_toEndOf="@+id/image_icon_url"
+        app:layout_constraintTop_toBottomOf="@+id/view_divider_download_link_list"
+        tools:text="Website" />
+
+    <TextView
+        android:id="@+id/text_download_link_age"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/prt_tdl__text_download_link_age__mrg_end"
+        android:textColor="@color/primaryText"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view_divider_download_link_list"
+        tools:text="0m" />
+</android.support.constraint.ConstraintLayout>

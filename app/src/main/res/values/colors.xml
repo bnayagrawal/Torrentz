@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--Only color theme for this app-->
+    <color name="colorPrimary">#034F84</color>
+    <color name="colorPrimaryDark">#023E68</color>
+    <color name="colorAccent">#ff9267</color>
+    <color name="colorPrimaryLight">#e9f5ff</color>
+
+    <color name="primaryText">#000000</color>
+    <color name="secondaryText">#7d7d7d</color>
+
+    <color name="primaryTextInverted">#ffffff</color>
+    <color name="secondaryTextInverted">#e0e0e0</color>
+
+    <color name="divider">#DCDCDC</color>
+    <color name="layoutBackground">#eaeaea</color>
+    <color name="layoutBackgroundLight">#f5f5f5</color>
+    <color name="rippleColor">#bdbdbd</color>
+
+    <color name="green">#7cb342</color>
+    <color name="red">#e53935</color>
+
+    <color name="link">#336699</color>
+</resources>

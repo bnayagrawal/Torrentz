@@ -1,0 +1,57 @@
+<resources>
+    <string name="app_name">Torrentz</string>
+
+    <!-- Values for activity_item_details.xml -->
+    <string name="symbol_bullet">\u2022</string>
+    <string name="symbol_right">\u2713</string>
+    <string name="symbol_wrong">\u2717</string>
+    <string name="label_torrent_quality">Torrent Quality</string>
+    <string name="verified_as_a_good_torrent">Verified as a good torrent</string>
+    <string name="fake">fake</string>
+    <string name="password">Password</string>
+    <string name="virus">Virus</string>
+    <string name="low_quality">Low Quality</string>
+    <string name="label_torrent_trackers">Torrent Trackers</string>
+    <string name="button_label_open_magnet_link">OPEN MAGNET LINK</string>
+    <string name="button_label_copy_magnet_link">COPY MAGNET LINK</string>
+    <string name="label_torrent_download_locations">Torrent Download Locations</string>
+    <string name="content_description_copy_magnet_link">Copy Magnet Link</string>
+
+    <!-- Values for activity_search.xml -->
+    <string name="query_hint_search_torrents">Search torrents&#8230;</string>
+    <string name="label_about">Torrentz2.is is a free, fast and powerful meta-search engine combining results from dozens of search engines</string>
+    <string name="label_provider_name">Torrentz2.is</string>
+    <string name="label_browse_popular_torrents"><u>Click here</u> to browse latest popular torrents</string>
+    <string name="content_description_search_icon">Search Icon</string>
+
+    <!-- Values for activity_search_result.xml -->
+    <string name="label_torrent_added">Torrent\nAdded</string>
+    <string name="label_include_adult">Include\nAdult</string>
+    <string name="label_verified_torrents">Verified\nTorrents</string>
+    <string name="label_page">Page</string>
+    <string name="content_description_last_page">Last Page</string>
+    <string name="content_description_first_page">First Page</string>
+    <string name="content_description_next_page">Next Page</string>
+    <string name="content_description_previous_page">Previous Page</string>
+
+    <!-- Values for item_torrent.xml -->
+    <string name="content_description_file_icon">File Icon</string>
+    <string name="content_description_seeds_icon">Seeds Icon</string>
+    <string name="content_description_peers_icon">Peers Icon</string>
+
+    <!-- Values for partial_torrent_download_link.xml -->
+    <string name="content_description_favicon">Favicon</string>
+
+    <!-- Values for menu of activity_item_details.xml -->
+    <string name="action_share">Share</string>
+    <string name="action_open_in_browser">Open in browser</string>
+
+    <!-- Values for menu of activity_search_result.xml -->
+    <string name="action_search">Search</string>
+    <string name="action_order_by">Order by</string>
+
+    <!-- Values for dialog_cloud_flare_clearance.xml -->
+    <string name="label_wait_for_clearance">Please wait for CloudFlare clearance&#8230;</string>
+    <string name="info_cookie_retrieved">Clearance cookies retrieved :)</string>
+    <string name="error_retrieving_cookie">Error retrieving clearance cookies!\nPlease try again.</string>
+</resources>

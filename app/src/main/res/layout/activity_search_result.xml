@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.bnayagrawal.torrentz.SearchResultActivity">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraint_filter_panel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/layoutBackgroundLight"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/text_label_torrent_age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/act_sr__text_label_torrent_age__mrg"
+            android:layout_marginStart="@dimen/act_sr__text_label_torrent_age__mrg"
+            android:layout_marginTop="@dimen/act_sr__text_label_torrent_age__mrg"
+            android:text="@string/label_torrent_added"
+            android:textColor="@color/primaryText"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/spinner_torrent_age"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Spinner
+            android:id="@+id/spinner_torrent_age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/act_sr__spinner_torrent_age__mrg"
+            android:layout_marginStart="@dimen/act_sr__spinner_torrent_age__mrg"
+            android:layout_marginTop="@dimen/act_sr__spinner_torrent_age__mrg"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/view_divider_torrent_age"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/text_label_torrent_age"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/view_divider_torrent_age"
+            android:layout_width="1dp"
+            android:layout_height="0dp"
+            android:background="@color/divider"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/check_include_adult_torrents"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/spinner_torrent_age"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <CheckBox
+            android:id="@+id/check_include_adult_torrents"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/act_sr__check_include_adult_torrents__mrg_vrt"
+            android:layout_marginStart="@dimen/act_sr__check_include_adult_torrents__mrg_hrz"
+            android:layout_marginTop="@dimen/act_sr__check_include_adult_torrents__mrg_vrt"
+            android:checked="true"
+            android:paddingEnd="0dp"
+            android:paddingStart="@dimen/act_sr__check_include_adult_torrents__pdng_start"
+            android:text="@string/label_include_adult"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/view_divider_include_adult"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/view_divider_torrent_age"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/view_divider_include_adult"
+            android:layout_width="1dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="@dimen/act_sr__view_divider_include_adult__mrg_start"
+            android:background="@color/divider"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/check_verified_torrents"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/check_include_adult_torrents"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <CheckBox
+            android:id="@+id/check_verified_torrents"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/act_sr__check_verified_torrents__mrg_vrt"
+            android:layout_marginEnd="@dimen/act_sr__check_verified_torrents__mrg_end"
+            android:layout_marginStart="@dimen/act_sr__check_verified_torrents__mrg_start"
+            android:layout_marginTop="@dimen/act_sr__check_verified_torrents__mrg_vrt"
+            android:paddingEnd="0dp"
+            android:paddingStart="@dimen/act_sr__check_verified_torrents__pdng_start"
+            android:text="@string/label_verified_torrents"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/view_divider_include_adult"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/divider"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_search_result"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraint_filter_panel" />
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_pagination_panel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/act_sr__card_pagination_panel__mrg_vrt"
+        android:layout_marginEnd="@dimen/act_sr__card_pagination_panel__mrg_hrz"
+        android:layout_marginStart="@dimen/act_sr__card_pagination_panel__mrg_hrz"
+        app:cardBackgroundColor="@color/layoutBackgroundLight"
+        app:cardCornerRadius="@dimen/act_sr__card_pagination_panel__corner_radius"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/pagination_panel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:id="@+id/image_button_first_page"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/act_sr__image_button_first_page__mrg"
+                android:layout_marginStart="@dimen/act_sr__image_button_first_page__mrg"
+                android:layout_marginTop="@dimen/act_sr__image_button_first_page__mrg"
+                android:adjustViewBounds="true"
+                android:background="@drawable/ripple_effect"
+                android:contentDescription="@string/content_description_first_page"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_arrow_double_left" />
+
+            <View
+                android:id="@+id/view_divider_first_page"
+                android:layout_width="1dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="@dimen/act_sr__view_divider_first_page__mrg_start"
+                android:background="@color/divider"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/image_button_first_page"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/image_button_previous_page"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/act_sr__image_button_previous_page__mrg"
+                android:layout_marginStart="@dimen/act_sr__image_button_previous_page__mrg"
+                android:layout_marginTop="@dimen/act_sr__image_button_previous_page__mrg"
+                android:adjustViewBounds="true"
+                android:background="@drawable/ripple_effect"
+                android:contentDescription="@string/content_description_previous_page"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/view_divider_first_page"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_arrow_left" />
+
+            <View
+                android:id="@+id/view_divider_previous_page"
+                android:layout_width="1dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="@dimen/act_sr__view_divider_previous_page__mrg_start"
+                android:background="@color/divider"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/image_button_previous_page"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/text_label_page"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/act_sr__text_label_page__mrg_vrt"
+                android:layout_marginStart="@dimen/act_sr__text_label_page__mrg_hrz"
+                android:layout_marginTop="@dimen/act_sr__text_label_page__mrg_vrt"
+                android:text="@string/label_page"
+                android:textColor="@color/primaryText"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/view_divider_previous_page"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Spinner
+                android:id="@+id/spinner_page"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/act_sr__spinner_page__mrg"
+                android:layout_marginStart="@dimen/act_sr__spinner_page__mrg"
+                android:layout_marginTop="@dimen/act_sr__spinner_page__mrg"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/text_label_page"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/view_divider_spinner_page"
+                android:layout_width="1dp"
+                android:layout_height="0dp"
+                android:background="@color/divider"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/spinner_page"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/image_button_next_page"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/act_sr__image_button_next_page__mrg"
+                android:layout_marginStart="@dimen/act_sr__image_button_next_page__mrg"
+                android:layout_marginTop="@dimen/act_sr__image_button_next_page__mrg"
+                android:adjustViewBounds="true"
+                android:background="@drawable/ripple_effect"
+                android:contentDescription="@string/content_description_next_page"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/view_divider_spinner_page"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_arrow_right" />
+
+            <View
+                android:id="@+id/view_divider_next_page"
+                android:layout_width="1dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="@dimen/act_sr__view_divider_next_page__mrg_start"
+                android:background="@color/divider"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/image_button_next_page"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/image_button_last_page"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/act_sr__image_button_last_page__mrg"
+                android:layout_marginEnd="@dimen/act_sr__image_button_last_page__mrg"
+                android:layout_marginStart="@dimen/act_sr__image_button_last_page__mrg"
+                android:layout_marginTop="@dimen/act_sr__image_button_last_page__mrg"
+                android:adjustViewBounds="true"
+                android:background="@drawable/ripple_effect"
+                android:contentDescription="@string/content_description_last_page"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/view_divider_next_page"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_arrow_double_right" />
+
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.v7.widget.CardView>
+</android.support.constraint.ConstraintLayout>

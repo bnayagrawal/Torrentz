@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- text sizes -->
+    <dimen name="text_size_small">14sp</dimen>
+    <dimen name="text_size_semi_medium">16sp</dimen>
+    <dimen name="text_size_medium">18sp</dimen>
+    <dimen name="text_size_semi_large">26sp</dimen>
+    <dimen name="text_size_large">32sp</dimen>
+    <dimen name="text_size_jumbo">98sp</dimen>
+
+    <!-- Values for the layout activity_item_details.xml -->
+    <dimen name="act_id__card__corner_radius">1dp</dimen>
+    <dimen name="act_id__card__mrg_top">8dp</dimen>
+
+    <dimen name="act_id__text_torrent_name__mrg_vrt">8dp</dimen>
+    <dimen name="act_id__text_torrent_name__mrg_hrz">16dp</dimen>
+
+    <dimen name="act_id__text_torrent_category_age__mrg_vrt">8dp</dimen>
+    <dimen name="act_id__text_torrent_category_age__mrg_hrz">16dp</dimen>
+
+    <dimen name="act_id__image_copy_hash__mrg_vrt">8dp</dimen>
+    <dimen name="act_id__image_copy_hash__mrg_hrz">16dp</dimen>
+
+    <dimen name="act_id__text_hash__mrg_vrt">8dp</dimen>
+    <dimen name="act_id__text_hash__mrg_start">8dp</dimen>
+    <dimen name="act_id__text_hash__mrg_end">16dp</dimen>
+
+    <dimen name="act_id__text_label_torrent_quality__mrg_hrz">16dp</dimen>
+    <dimen name="act_id__text_label_torrent_quality__mrg_vrt">8dp</dimen>
+
+    <dimen name="act_id__text_torrent_verification__mrg_start">16dp</dimen>
+    <dimen name="act_id__text_torrent_verification__mrg_top">8dp</dimen>
+
+    <dimen name="act_id__text_torrent_verification_count__mrg_hrz">16dp</dimen>
+    <dimen name="act_id__text_torrent_verification_count__mrg_vrt">8dp</dimen>
+
+    <dimen name="act_id__view_divider_card_quality__mrg_bottom">16dp</dimen>
+    <dimen name="act_id__view_divider_card_quality__mrg_start">8dp</dimen>
+    <dimen name="act_id__view_divider_card_quality__mrg_top">8dp</dimen>
+
+    <dimen name="act_id__text_fake__mrg_end">16dp</dimen>
+    <dimen name="act_id__text_fake__mrg_start">8dp</dimen>
+    <dimen name="act_id__text_fake__pdng">4dp</dimen>
+
+    <dimen name="act_id__text_password__mrg_end">16dp</dimen>
+    <dimen name="act_id__text_password__mrg_start">8dp</dimen>
+    <dimen name="act_id__text_password__pdng">4dp</dimen>
+
+    <dimen name="act_id__text_low_quality__mrg_end">16dp</dimen>
+    <dimen name="act_id__text_low_quality__mrg_start">8dp</dimen>
+    <dimen name="act_id__text_low_quality__pdng">4dp</dimen>
+
+    <dimen name="act_id__text_virus__mrg_bottom">8dp</dimen>
+    <dimen name="act_id__text_virus__mrg_end">16dp</dimen>
+    <dimen name="act_id__text_virus__mrg_start">8dp</dimen>
+    <dimen name="act_id__text_virus__pdng">4dp</dimen>
+
+    <dimen name="act_id__text_label_torrent_trackers__hrz">16dp</dimen>
+    <dimen name="act_id__text_label_torrent_trackers__vrt">8dp</dimen>
+    
+    <dimen name="act_id__linear_layout_tracker_list__mrg_top">8dp</dimen>
+
+    <dimen name="act_id__button_open_magnet_link__height">32dp</dimen>
+    <dimen name="act_id__button_open_magnet_link__mrg_bottom">16dp</dimen>
+    <dimen name="act_id__button_open_magnet_link__mrg_end">16dp</dimen>
+    <dimen name="act_id__button_open_magnet_link__mrg_top">8dp</dimen>
+    <dimen name="act_id__button_open_magnet_link__pdng_hrz">16dp</dimen>
+
+    <dimen name="act_id__button_copy_magnet_link__height">32dp</dimen>
+    <dimen name="act_id__button_copy_magnet_link__mrg_bottom">16dp</dimen>
+    <dimen name="act_id__button_copy_magnet_link__mrg_end">8dp</dimen>
+    <dimen name="act_id__button_copy_magnet_link__mrg_start">16dp</dimen>
+    <dimen name="act_id__button_copy_magnet_link__mrg_top">8dp</dimen>
+    <dimen name="act_id__button_copy_magnet_link__pdng_hrz">16dp</dimen>
+
+    <dimen name="act_id__text_label_torrent_download_locations__mrg_hrz">16dp</dimen>
+    <dimen name="act_id__text_label_torrent_download_locations__mrg_vrt">8dp</dimen>
+
+    <!-- Values for the layout activity_search.xml -->
+    <dimen name="act_s__card_view_search__mrg_hrz">12dp</dimen>
+    <dimen name="act_s__card_view_search__mrg_vrt">34dp</dimen>
+    <dimen name="act_s__card_view_search__corner_radius">3dp</dimen>
+
+    <dimen name="act_s__image_options__mrg_hrz">8dp</dimen>
+    <dimen name="act_s__image_options__mrg_vrt">8dp</dimen>
+
+    <dimen name="act_s__text_label_about__mrg_hrz">24dp</dimen>
+    <dimen name="act_s__text_label_about__mrg_vrt">16dp</dimen>
+
+    <dimen name="act_s__text_browse_popular_torrents__mrg_top">8dp</dimen>
+
+    <dimen name="act_s__image_icon_search__size">72dp</dimen>
+    <dimen name="act_s__image_icon_search__mrg_vrt">8dp</dimen>
+
+    <!-- Values for the layout partial_torrent_tracker.xml -->
+    <dimen name="prt_tt__text_tracker_url__mrg_vrt">8dp</dimen>
+    <dimen name="prt_tt__text_tracker_url__mrg_start">16dp</dimen>
+    <dimen name="prt_tt__text_tracker_url__mrg_end">8dp</dimen>
+
+    <dimen name="prt_tt__text_tracker_seeds_count__mrg_vrt">8dp</dimen>
+    <dimen name="prt_tt__text_tracker_seeds_count__mrg_hrz">16dp</dimen>
+
+    <dimen name="prt_tt__image_icon_tracker_peers__mrg_vrt">8dp</dimen>
+    <dimen name="prt_tt__image_icon_tracker_peers__mrg_hrz">8dp</dimen>
+
+    <dimen name="prt_tt__text_tracker_peers_count__mrg_vrt">8dp</dimen>
+    <dimen name="prt_tt__text_tracker_peers_count__mrg_hrz">8dp</dimen>
+
+    <dimen name="prt_tt__image_icon_tracker_seeds__mrg_vrt">8dp</dimen>
+    <dimen name="prt_tt__image_icon_tracker_seeds__mrg_hrz">8dp</dimen>
+
+    <!-- Values for layout partial_torrent_download_link.xml -->
+    <dimen name="prt_tdl__image_icon_url__mrg_vrt">8dp</dimen>
+    <dimen name="prt_tdl__image_icon_url__mrg_hrz">16dp</dimen>
+
+    <dimen name="prt_tdl__text_download_link_url__mrg">8dp</dimen>
+
+    <dimen name="prt_tdl__text_download_link_age__mrg_end">16dp</dimen>
+
+    <!-- Values for layout item_torrent.xml -->
+    <dimen name="itm_t__text_torrent_name__mrg_hrz">16dp</dimen>
+    <dimen name="itm_t__text_torrent_name__mrg_vrt">8dp</dimen>
+
+    <dimen name="itm_t__text_torrent_category_age__mrg_hrz">16dp</dimen>
+    <dimen name="itm_t__text_torrent_category_age__mrg_vrt">8dp</dimen>
+
+    <dimen name="itm_t__image_icon_torrent_file__mrg_hrz">16dp</dimen>
+    <dimen name="itm_t__image_icon_torrent_file__mrg_vrt">8dp</dimen>
+
+    <dimen name="itm_t__text_torrent_file_size__mrg">8dp</dimen>
+
+    <dimen name="itm_t__image_icon_torrent_seeds__mrg">8dp</dimen>
+
+    <dimen name="itm_t__text_torrent_seeds_count__mrg">8dp</dimen>
+
+    <dimen name="itm_t__image_icon_torrent_peers__mrg">8dp</dimen>
+
+    <dimen name="itm_t__text_torrent_peers_count__mrg">8dp</dimen>
+
+    <!-- Values for layout item_search_suggestion.xml -->
+    <dimen name="itm_ss__text_search_suggestion_item__mrg_hrz">16dp</dimen>
+    <dimen name="itm_ss__text_search_suggestion_item__mrg_vrt">8dp</dimen>
+
+    <!-- Values for layout activity_search_result.xml -->
+    <dimen name="act_sr__text_label_torrent_age__mrg">8dp</dimen>
+
+    <dimen name="act_sr__spinner_torrent_age__mrg">8dp</dimen>
+
+    <dimen name="act_sr__check_include_adult_torrents__mrg_vrt">8dp</dimen>
+    <dimen name="act_sr__check_include_adult_torrents__mrg_hrz">4dp</dimen>
+    <dimen name="act_sr__check_include_adult_torrents__pdng_start">4dp</dimen>
+
+    <dimen name="act_sr__view_divider_include_adult__mrg_start">8dp</dimen>
+
+    <dimen name="act_sr__check_verified_torrents__mrg_vrt">8dp</dimen>
+    <dimen name="act_sr__check_verified_torrents__mrg_end">8dp</dimen>
+    <dimen name="act_sr__check_verified_torrents__mrg_start">4dp</dimen>
+    <dimen name="act_sr__check_verified_torrents__pdng_start">4dp</dimen>
+
+    <dimen name="act_sr__card_pagination_panel__mrg_vrt">16dp</dimen>
+    <dimen name="act_sr__card_pagination_panel__mrg_hrz">8dp</dimen>
+    <dimen name="act_sr__card_pagination_panel__corner_radius">20dp</dimen>
+
+    <dimen name="act_sr__image_button_first_page__mrg">8dp</dimen>
+    <dimen name="act_sr__image_button_previous_page__mrg">8dp</dimen>
+    <dimen name="act_sr__image_button_next_page__mrg">8dp</dimen>
+    <dimen name="act_sr__image_button_last_page__mrg">8dp</dimen>
+
+    <dimen name="act_sr__view_divider_first_page__mrg_start">8dp</dimen>
+    <dimen name="act_sr__view_divider_previous_page__mrg_start">8dp</dimen>
+    <dimen name="act_sr__view_divider_next_page__mrg_start">8dp</dimen>
+
+    <dimen name="act_sr__text_label_page__mrg_vrt">8dp</dimen>
+    <dimen name="act_sr__text_label_page__mrg_hrz">16dp</dimen>
+
+    <dimen name="act_sr__spinner_page__mrg">8dp</dimen>
+    
+    <!-- Values for layout dialog_cloud_flare_clearance.xml -->
+    <dimen name="dlg_cfc__constraint_clearance_dialog__pdng">16dp</dimen>
+    <dimen name="dlg_cfc__text_label_clearance__mrg">8dp</dimen>
+</resources>
