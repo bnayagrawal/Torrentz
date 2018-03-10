@@ -42,7 +42,6 @@
                 android:resource="@xml/searchable" />
         </activity>
         <activity android:name=".ItemDetailsActivity" />
-        <activity android:name=".CloudFlareClearanceActivity"></activity>
     </application>
 
 </manifest>
